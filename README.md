@@ -21,7 +21,7 @@ start assistant
 
 ### .agents
 
-stores [agent skills](https://opencode.ai/docs/skills). SKILL.md's are ignored here by git (double-check .gitignore).
+stores [agent skills](https://opencode.ai/docs/skills). SKILL.md's are ignored here by git (double-check `.gitignore`).
 
 ### .storybook
 
@@ -41,7 +41,7 @@ global CSS rules reside here too.
 
 ### sandbox
 
-see blogpost (a-safe-ai-workflow-with-deno-sandboxes.md).
+see blogpost (`a-safe-ai-workflow-with-deno-sandboxes.md`).
 
 ### src
 

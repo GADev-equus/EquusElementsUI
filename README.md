@@ -65,7 +65,7 @@ houses any tests that aren't [storybook ones](https://storybook.js.org/docs/writ
 
 ## Using equuselementsui as an npm package
 
-You can test the equuselementsui npm package locally using (npm link)[https://docs.npmjs.com/cli/v9/commands/npm-link]:
+You can test the equuselementsui npm package locally using [npm link](https://docs.npmjs.com/cli/v9/commands/npm-link):
 
 ```sh
 # in this repo

@@ -1,0 +1,161 @@
+/**
+ * Theme System
+ *
+ * Purpose: Easy color scheme switching and theme variants
+ * Supports: Multiple themes, dark mode, custom brand colors
+ *
+ * Usage:
+ * - Default: No class needed (uses :root variables)
+ * - Dark mode: Add data-theme="dark" to <html> or <body>
+ * - Custom theme: Add data-theme="your-theme" to <html> or <body>
+ */
+
+/* ===========================
+   DEFAULT THEME (StorylineOS Embed)
+   =========================== */
+
+:root {
+  --color-background: #000000;
+  --color-background-secondary: #060809;
+  --color-background-tertiary: #0c0f10;
+
+  --color-surface: transparent;
+  --color-surface-elevated: #080b0c;
+
+  --color-text-primary: #d6dcdc;
+  --color-text-secondary: #aeb5b5;
+  --color-text-tertiary: #828989;
+  --color-text-inverse: #000000;
+
+  --color-border: color-mix(in srgb, #d6dcdc 24%, transparent);
+  --color-border-hover: color-mix(in srgb, #d6dcdc 40%, transparent);
+  --color-border-focus: #d6dcdc;
+
+  --color-action-primary: #d6dcdc;
+  --color-action-primary-hover: #d6dcdc;
+  --color-action-primary-active: #d6dcdc;
+
+  --color-action-secondary: transparent;
+  --color-action-secondary-hover: color-mix(in srgb, #d6dcdc 10%, transparent);
+  --color-action-secondary-active: color-mix(in srgb, #d6dcdc 16%, transparent);
+
+  /* Button tokens */
+  --color-button-bg: #d6dcdc;
+  --color-button-text: #000000;
+  --color-button-hover-bg: transparent;
+  --color-button-hover-text: #d6dcdc;
+  --color-button-hover-border: #d6dcdc;
+
+  /* Component aliases */
+  --color-text: var(--color-text-primary);
+  --color-primary: var(--color-action-primary);
+  --color-secondary: var(--color-action-secondary);
+  --color-danger: var(--color-error);
+  --transition-normal: var(--transition-base);
+}
+
+/* ===========================
+   DARK THEME
+   =========================== */
+
+[data-theme='dark'] {
+  --color-background: #000000;
+  --color-background-secondary: #060809;
+  --color-background-tertiary: #0c0f10;
+  --color-surface: transparent;
+  --color-surface-elevated: #080b0c;
+  --color-text-primary: #d6dcdc;
+  --color-text-secondary: #aeb5b5;
+  --color-text-tertiary: #828989;
+  --color-text-inverse: #000000;
+  --color-border: color-mix(in srgb, #d6dcdc 24%, transparent);
+  --color-border-hover: color-mix(in srgb, #d6dcdc 40%, transparent);
+  --color-border-focus: #d6dcdc;
+  --color-action-primary: #d6dcdc;
+  --color-action-primary-hover: #d6dcdc;
+  --color-action-primary-active: #d6dcdc;
+  --color-action-secondary: transparent;
+  --color-action-secondary-hover: color-mix(in srgb, #d6dcdc 10%, transparent);
+  --color-action-secondary-active: color-mix(in srgb, #d6dcdc 16%, transparent);
+  --color-button-bg: #d6dcdc;
+  --color-button-text: #000000;
+  --color-button-hover-bg: transparent;
+  --color-button-hover-text: #d6dcdc;
+  --color-button-hover-border: #d6dcdc;
+}
+
+/* ===========================
+   ALTERNATIVE THEME EXAMPLE
+   Custom brand colors
+   =========================== */
+
+[data-theme='ocean'] {
+  /* Override primary colors with ocean blue palette */
+  --color-primary-50: #ecfeff;
+  --color-primary-100: #cffafe;
+  --color-primary-200: #a5f3fc;
+  --color-primary-300: #67e8f9;
+  --color-primary-400: #22d3ee;
+  --color-primary-500: #06b6d4;
+  --color-primary-600: #0891b2;
+  --color-primary-700: #0e7490;
+  --color-primary-800: #155e75;
+  --color-primary-900: #164e63;
+
+  /* Semantic colors use the new primary palette */
+  --color-action-primary: var(--color-primary-600);
+  --color-action-primary-hover: var(--color-primary-700);
+  --color-action-primary-active: var(--color-primary-800);
+}
+
+[data-theme='sunset'] {
+  /* Override primary colors with orange/red palette */
+  --color-primary-50: #fff7ed;
+  --color-primary-100: #ffedd5;
+  --color-primary-200: #fed7aa;
+  --color-primary-300: #fdba74;
+  --color-primary-400: #fb923c;
+  --color-primary-500: #f97316;
+  --color-primary-600: #ea580c;
+  --color-primary-700: #c2410c;
+  --color-primary-800: #9a3412;
+  --color-primary-900: #7c2d12;
+
+  --color-action-primary: var(--color-primary-600);
+  --color-action-primary-hover: var(--color-primary-700);
+  --color-action-primary-active: var(--color-primary-800);
+}
+
+[data-theme='forest'] {
+  /* Override primary colors with green palette */
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-300: #86efac;
+  --color-primary-400: #4ade80;
+  --color-primary-500: #22c55e;
+  --color-primary-600: #16a34a;
+  --color-primary-700: #15803d;
+  --color-primary-800: #166534;
+  --color-primary-900: #14532d;
+
+  --color-action-primary: var(--color-primary-600);
+  --color-action-primary-hover: var(--color-primary-700);
+  --color-action-primary-active: var(--color-primary-800);
+}
+
+/* ===========================
+   THEME TRANSITIONS
+   =========================== */
+
+/**
+ * Smooth transition when switching themes
+ * Applied to elements that should animate on theme change
+ */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  transition: background-color var(--transition-base),
+              color var(--transition-base);
+}
+

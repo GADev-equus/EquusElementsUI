@@ -1,16 +1,48 @@
 {
+	"name": "equuselementsui",
+	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "vite"
+		"dev": "vite",
+		"build": "vite build",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build",
+		"sandbox": "node --env-file=sandbox/.env sandbox/sandbox.js"
 	},
 	"dependencies": {
+		"prop-types": "^15.8.1",
+		"react": "latest",
+		"react-dom": "latest"
+	},
+	"peerDependencies": {
+		"prop-types": "^15.8.1",
 		"react": "latest",
 		"react-dom": "latest"
 	},
 	"devDependencies": {
+		"@deno/sandbox": "^0.13.2",
+		"@storybook/react-vite": "^10.3.3",
+		"@types/node": "^25.5.0",
+		"@types/prop-types": "^15.7.15",
 		"@types/react": "latest",
 		"@types/react-dom": "latest",
 		"@vitejs/plugin-react": "latest",
+		"storybook": "^10.3.3",
 		"vite": "latest"
+	},
+	"main": "dist/equuselementsui.cjs.js",
+	"module": "dist/equuselementsui.es.js",
+	"exports": {
+		".": {
+			"import": "./dist/equuselementsui.es.js",
+			"require": "./dist/equuselementsui.cjs.js"
+		},
+		"./style.css": "./dist/equuselementsui.css"
+	},
+	"files": [
+		"dist"
+	],
+	"publishConfig": {
+		"access": "public"
 	}
 }

@@ -1,3 +1,13 @@
 node_modules
 package-lock.json
 .env
+dist
+*.patch
+
+bun.lock
+
+.agents/skills/*/SKILL.md
+tasks/*.md
+
+*storybook.log
+storybook-static

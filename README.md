@@ -9,12 +9,12 @@ It uses:
 
 ## workflow
 
-start assistant
-↓
-"`/prd-writer` create a prd for a button"
-↓
-"`/technical-writer` create a technical spec from the button prd"
-↓
+start assistant  
+↓  
+"`/prd-writer` create a prd for a button"  
+↓  
+"`/technical-writer` create a technical spec from the button prd"  
+↓  
 "`/front-end-developer` create a button from the button technical spec"
 
 ## project structure
@@ -31,10 +31,10 @@ boilerplate for storybook. `main.js` sets up a storybook config. `preview.js` se
 
 houses the style guides that skills should instruct the agent to read. Going from idea to code, each guide should be more technical than the previous one:
 
-`prd-writer` guide
-↓
-`technical-writer` guide (**more** technical)
-↓
+`prd-writer` guide  
+↓  
+`technical-writer` guide (**more** technical)  
+↓  
 `front-end-developer` guide (**most** technical)
 
 global CSS rules reside here too.
@@ -49,10 +49,10 @@ the components, their styling, their corresponding storybook story, and `index.j
 
 ### tasks
 
-.
-├── completed.txt
-├── prd-[component-name].md
-├── technical-spec-[component-name].md
+.  
+├── completed.txt  
+├── prd-[component-name].md  
+├── technical-spec-[component-name].md  
 └── todo.txt
 
 stores all of the generated prds and technical specs. `skills/technical-writer` reads a prd and creates a technical spec. `skills/front-end-developer` reads a technical spec and creates a component.
@@ -86,5 +86,5 @@ import { Button } from "equuselementsui";
 
 ## links
 
-[bestofjs: Component library, React](https://bestofjs.org/projects?page=1&limit=30&tags=component&tags=react&sort=total)
+[bestofjs: Component library, React](https://bestofjs.org/projects?page=1&limit=30&tags=component&tags=react&sort=total)  
 [vite: Building for Production: Library Mode](https://vite.dev/guide/build#library-mode)
